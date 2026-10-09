@@ -1,0 +1,87 @@
+# Model weights
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.cache/
+cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local state and private material
+.DS_Store
+*.db
+*.sqlite
+*.sqlite3
+raw/
+private/
+assets/private/
+*.log
+.env
+.env.*
+
+# Media excluded by default; release needs separate review
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mov
+*.webm
+
+# Additional model/archive formats and generated media
+*.onnx
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.gif
+*.avif
+*.bmp
+*.tif
+*.tiff
+*.heic
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.aac
+*.flac
+*.ogg
+
+# Additional environment, test and build state
+env/
+node_modules/
+.tox/
+.nox/
+.ruff_cache/
+.ipynb_checkpoints/
+*.pyo
+.coverage
+.coverage.*
+htmlcov/
+
+# Database sidecars, generated outputs and temporary QA state
+*.db-*
+*.sqlite-*
+*.sqlite3-*
+logs/
+output/
+outputs/
+tmp/
+temp/
+work/
+.codex/
+.agents/
+browser-state/
+storage-state*.json

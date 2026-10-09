@@ -1,0 +1,38 @@
+# Model weights
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.gguf
+
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.cache/
+cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local state and private material
+.DS_Store
+*.db
+*.sqlite
+*.sqlite3
+raw/
+private/
+assets/private/
+*.log
+.env
+.env.*
+
+# Media excluded by default; release needs separate review
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mov
+*.webm

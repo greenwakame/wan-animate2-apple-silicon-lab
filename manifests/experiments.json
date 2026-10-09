@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "evidence": "User-provided H2 facts, H1 inventory and prior experiment records; chronology is relative order, exact run timestamps not reconstructed.",
+  "chronology": [
+    {
+      "sequence": 1,
+      "stage": "VACE 1.3B baseline",
+      "observation": "Technical MPS baseline output exists.",
+      "hypothesis_or_purpose": "Establish a short video generation path."
+    },
+    {
+      "sequence": 2,
+      "stage": "Reference identity experiments",
+      "observation": "Front, left, cleaned and padded reference comparisons were recorded.",
+      "hypothesis_or_purpose": "Improve identity retention; no universal optimum established."
+    },
+    {
+      "sequence": 3,
+      "stage": "OpenPose crouch/jump/landing control",
+      "observation": "Control v2/v3/v4r1 iterations and outputs exist.",
+      "hypothesis_or_purpose": "Make crouch, airborne phase and landing readable."
+    },
+    {
+      "sequence": 4,
+      "stage": "384 to 512",
+      "observation": "Control and padded reference were prepared at 512x512.",
+      "hypothesis_or_purpose": "Test resolution with matching input dimensions."
+    },
+    {
+      "sequence": 5,
+      "stage": "Successful VACE 512 driver",
+      "observation": "512x512, 17 frames, 8 fps, 2.125 seconds output retained.",
+      "hypothesis_or_purpose": "Use the VACE output as the Animate 2 RGB driver."
+    },
+    {
+      "sequence": 6,
+      "stage": "HyperFrames integration proof",
+      "observation": "Prior project record reports integration proof; private assets remain outside this candidate.",
+      "hypothesis_or_purpose": "Check downstream integration; not evidence of Animate 2 quality."
+    },
+    {
+      "sequence": 7,
+      "stage": "Animate 2 feasibility investigation",
+      "observation": "Hardware, formats and native ComfyUI nodes were investigated.",
+      "hypothesis_or_purpose": "Determine whether a small MPS run is feasible."
+    },
+    {
+      "sequence": 8,
+      "stage": "INT8 model installation",
+      "observation": "H1/H2 verify the local INT8 file against Comfy-Org bytes and SHA.",
+      "hypothesis_or_purpose": "Reduce stored model size; INT8 kernel execution was not proven."
+    },
+    {
+      "sequence": 9,
+      "stage": "Sampling mapping",
+      "observation": "20-step simple sigma sequence matched in the prior comparison; local DPM solver remains an approximation.",
+      "hypothesis_or_purpose": "Map base conditional-only guidance semantics."
+    },
+    {
+      "sequence": 10,
+      "stage": "v2 Animate 2 technical generation",
+      "observation": "PASS, approximately 10537 seconds; identity collapses after F11.",
+      "hypothesis_or_purpose": "ANIMATE2-V2"
+    },
+    {
+      "sequence": 11,
+      "stage": "v3 spatial Reference alignment experiment",
+      "observation": "PASS technically, approximately 8621 seconds; diagnostic D / worse from F1.",
+      "hypothesis_or_purpose": "ANIMATE2-V3"
+    },
+    {
+      "sequence": 12,
+      "stage": "v4 pose_end=0.7 planned but unrun",
+      "observation": "Historical static/UI validation PASS; generation NOT RUN.",
+      "hypothesis_or_purpose": "ANIMATE2-V4-UNRUN"
+    },
+    {
+      "sequence": 13,
+      "stage": "Project paused",
+      "observation": "Paused due to hardware, runtime and disk limits; H1/H2 did not resume generation.",
+      "hypothesis_or_purpose": "Freeze knowledge and preserve future restore information."
+    }
+  ],
+  "experiments": [
+    {
+      "id": "VACE-512",
+      "status": "COMPLETED",
+      "hypothesis": "A 512-pixel VACE control/reference pair can produce a short usable RGB driver.",
+      "changed_variable": {
+        "resolution": "384 to 512 compared with earlier VACE baseline"
+      },
+      "fixed_variables": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "seed": 12345,
+        "steps": 20,
+        "cfg": 6,
+        "sampler": "uni_pc",
+        "scheduler": "simple",
+        "shift": 8.000000000000002,
+        "denoise": 1,
+        "strength": 1,
+        "model": "wan2.1_vace_1.3B_fp16.safetensors",
+        "vae": "wan_2.1_vae.safetensors"
+      },
+      "workflow": {
+        "original_filename": "vace13b_cleanhires_v4r1_512_17.json",
+        "source_sha256": "cb20ab9e4ee998afbb49ff41f8f7f416303ae40ea7ba60fc402c7e37f2759b8f",
+        "sanitized_template": "workflows/vace/vace-512-driver-baseline.json",
+        "exact_reproduction": false
+      },
+      "output": {
+        "original_filename": "vace13b_cleanhires_v4r1_512_17_00001_.mp4",
+        "sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "bytes": 105180,
+        "included_in_repo": false
+      },
+      "runtime_seconds": null,
+      "runtime_is_approximate": false,
+      "technical_result": "PASS: technical generation completed",
+      "visual_result": "Successful VACE baseline; used as RGB driver. Not a universal identity-quality claim.",
+      "memory_before": null,
+      "memory_after": null,
+      "limitations": [
+        "Post measurement is not peak memory.",
+        "Sanitized template replaces private prompts and filenames; it cannot exactly reproduce private results.",
+        "No H2 generation or server validation was performed."
+      ]
+    },
+    {
+      "id": "ANIMATE2-V2",
+      "status": "COMPLETED",
+      "hypothesis": "The INT8 Animate 2 base path can technically complete a short MPS generation and retain reference identity.",
+      "changed_variable": {
+        "driver_input_location": "byte-identical output to input staging workaround; identity baseline"
+      },
+      "fixed_variables": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "sampling": {
+          "steps": 20,
+          "cfg": 1,
+          "shift": 5,
+          "scheduler": "simple",
+          "sampler": "SamplerDPMPP_2M_SDE",
+          "solver": "midpoint",
+          "eta": 0,
+          "s_noise": 1,
+          "noise_device": "cpu",
+          "denoise": 1,
+          "seed": 12345,
+          "add_noise": true
+        },
+        "model": "wan_animate_2_int8_convrot.safetensors",
+        "lora": null,
+        "driver_sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "pose_strength": 1,
+        "pose_start_percent": 0,
+        "reference_image_strength": 1,
+        "pose_end_percent": 1,
+        "reference_sha256": "99381e304a25df1e0f76295b0b577c808d650a592dafcb81b7ba8d27d73cd4ef"
+      },
+      "workflow": {
+        "original_filename": "wananimate2_rgbdriver_smoke_512_17_v2.json",
+        "source_sha256": "683212646ea12ab4166ba22e64b0d7b380ea9b0a2cf04596d2c7561fc94f98e6",
+        "sanitized_template": "workflows/animate2/animate2-v2-baseline.json",
+        "exact_reproduction": false
+      },
+      "output": {
+        "original_filename": "wananimate2_rgbdriver_smoke_512_17_v2_00001_.mp4",
+        "sha256": "2a5195ed39e3e6522bdfd603bc0a92d5ca5f5cd2cbe07e098a3c8179a3791140",
+        "bytes": 160876,
+        "included_in_repo": false
+      },
+      "runtime_seconds": 10537,
+      "runtime_is_approximate": true,
+      "technical_result": "PASS: technical generation completed",
+      "visual_result": "F1-F11 relatively good identity; collapse from F12 onward; severe collapse at F17.",
+      "memory_before": {
+        "available_gib": 13,
+        "compressed_gib": 3.03,
+        "swap_gib": 0
+      },
+      "memory_after": {
+        "available_gib": 6.42,
+        "compressed_gib": 15.78,
+        "swap_gib": 17.76
+      },
+      "limitations": [
+        "Post measurement is not peak memory.",
+        "Sanitized template replaces private prompts and filenames; it cannot exactly reproduce private results.",
+        "No H2 generation or server validation was performed."
+      ]
+    },
+    {
+      "id": "ANIMATE2-V3",
+      "status": "COMPLETED",
+      "hypothesis": "Spatial alignment of the reference to driver F1 may reduce subject oversizing and preserve identity.",
+      "changed_variable": {
+        "reference": {
+          "description": "174x342 content pasted at x168 y118 on a 512x512 canvas; same seed and driver as v2",
+          "before_sha256": "99381e304a25df1e0f76295b0b577c808d650a592dafcb81b7ba8d27d73cd4ef",
+          "after_sha256": "3dbbe758eed32801e96af6ac96aa3d4634df74d355e79db961d84fdf2b6b0bc1"
+        }
+      },
+      "fixed_variables": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "sampling": {
+          "steps": 20,
+          "cfg": 1,
+          "shift": 5,
+          "scheduler": "simple",
+          "sampler": "SamplerDPMPP_2M_SDE",
+          "solver": "midpoint",
+          "eta": 0,
+          "s_noise": 1,
+          "noise_device": "cpu",
+          "denoise": 1,
+          "seed": 12345,
+          "add_noise": true
+        },
+        "model": "wan_animate_2_int8_convrot.safetensors",
+        "lora": null,
+        "driver_sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "pose_strength": 1,
+        "pose_start_percent": 0,
+        "reference_image_strength": 1,
+        "pose_end_percent": 1
+      },
+      "workflow": {
+        "original_filename": "wananimate2_rgbdriver_smoke_512_17_refaligned_v3.json",
+        "source_sha256": "56c18b8118d454d1a4edbd78b116277fc93e24623bc7a16d2d54da9e746362bb",
+        "sanitized_template": "workflows/animate2/animate2-v3-reference-aligned.json",
+        "exact_reproduction": false
+      },
+      "output": {
+        "original_filename": "wananimate2_rgbdriver_smoke_512_17_refaligned_v3_00001_.mp4",
+        "sha256": "45cf2edab69190c0bd403f80d65e105ad2b072a919a015704b939d3be8557b5f",
+        "bytes": 141731,
+        "included_in_repo": false
+      },
+      "runtime_seconds": 8621,
+      "runtime_is_approximate": true,
+      "technical_result": "PASS: technical generation completed",
+      "visual_result": "D / worse: subject oversizing reduced, but face/hood collapse from F1; right-side vertical artifact; no normal identity recovery; reduced motion readability.",
+      "memory_before": {
+        "available_gib": 13.09,
+        "compressed_gib": 2.88,
+        "swap_gib": 0
+      },
+      "memory_after": {
+        "available_gib": 6.3,
+        "compressed_gib": 15.57,
+        "swap_gib": 17.69
+      },
+      "limitations": [
+        "Post measurement is not peak memory.",
+        "Sanitized template replaces private prompts and filenames; it cannot exactly reproduce private results.",
+        "No H2 generation or server validation was performed.",
+        "One fixed-seed reference-alignment run does not establish that smaller references are generally harmful."
+      ],
+      "baseline_experiment_id": "ANIMATE2-V2",
+      "run_conditions": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "sampling": {
+          "steps": 20,
+          "cfg": 1,
+          "shift": 5,
+          "scheduler": "simple",
+          "sampler": "SamplerDPMPP_2M_SDE",
+          "solver": "midpoint",
+          "eta": 0,
+          "s_noise": 1,
+          "noise_device": "cpu",
+          "denoise": 1,
+          "seed": 12345,
+          "add_noise": true
+        },
+        "model": "wan_animate_2_int8_convrot.safetensors",
+        "lora": null,
+        "driver_sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "pose_strength": 1,
+        "pose_start_percent": 0,
+        "reference_image_strength": 1,
+        "pose_end_percent": 1,
+        "reference_sha256": "3dbbe758eed32801e96af6ac96aa3d4634df74d355e79db961d84fdf2b6b0bc1"
+      }
+    },
+    {
+      "id": "ANIMATE2-V4-UNRUN",
+      "status": "UNRUN",
+      "hypothesis": "Ending pose conditioning earlier in denoising may improve late identity stability.",
+      "changed_variable": {
+        "pose_end_percent": {
+          "before": 1,
+          "after": 0.7
+        }
+      },
+      "fixed_variables": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "sampling": {
+          "steps": 20,
+          "cfg": 1,
+          "shift": 5,
+          "scheduler": "simple",
+          "sampler": "SamplerDPMPP_2M_SDE",
+          "solver": "midpoint",
+          "eta": 0,
+          "s_noise": 1,
+          "noise_device": "cpu",
+          "denoise": 1,
+          "seed": 12345,
+          "add_noise": true
+        },
+        "model": "wan_animate_2_int8_convrot.safetensors",
+        "lora": null,
+        "driver_sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "pose_strength": 1,
+        "pose_start_percent": 0,
+        "reference_image_strength": 1,
+        "reference_sha256": "99381e304a25df1e0f76295b0b577c808d650a592dafcb81b7ba8d27d73cd4ef"
+      },
+      "workflow": {
+        "original_filename": "wananimate2_rgbdriver_smoke_512_17_poseend070_v4.json",
+        "source_sha256": "09616b54976d8d959aca3b69434ce60110a056bfc45783afde1ff8885dd7821a",
+        "sanitized_template": "workflows/animate2/animate2-v4-pose-end-070-unrun.json",
+        "exact_reproduction": false
+      },
+      "output": null,
+      "runtime_seconds": null,
+      "runtime_is_approximate": false,
+      "technical_result": "NOT RUN; historical static validation PASS and UI validation PASS",
+      "visual_result": "UNRUN; no generated result or visual inference.",
+      "memory_before": null,
+      "memory_after": null,
+      "limitations": [
+        "Post measurement is not peak memory.",
+        "Sanitized template replaces private prompts and filenames; it cannot exactly reproduce private results.",
+        "No H2 generation or server validation was performed.",
+        "Stopped at memory feasibility C; project subsequently paused.",
+        "pose_end_percent specifies denoising progression, not video time."
+      ],
+      "baseline_experiment_id": "ANIMATE2-V2",
+      "run_conditions": {
+        "width": 512,
+        "height": 512,
+        "frames": 17,
+        "batch_size": 1,
+        "fps": 8,
+        "duration_seconds": 2.125,
+        "sampling": {
+          "steps": 20,
+          "cfg": 1,
+          "shift": 5,
+          "scheduler": "simple",
+          "sampler": "SamplerDPMPP_2M_SDE",
+          "solver": "midpoint",
+          "eta": 0,
+          "s_noise": 1,
+          "noise_device": "cpu",
+          "denoise": 1,
+          "seed": 12345,
+          "add_noise": true
+        },
+        "model": "wan_animate_2_int8_convrot.safetensors",
+        "lora": null,
+        "driver_sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+        "pose_strength": 1,
+        "pose_start_percent": 0,
+        "reference_image_strength": 1,
+        "pose_end_percent": 0.7,
+        "reference_sha256": "99381e304a25df1e0f76295b0b577c808d650a592dafcb81b7ba8d27d73cd4ef"
+      },
+      "artifact_identification": {
+        "output_prefix": "identification only, not experimental semantics"
+      }
+    }
+  ]
+}

@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "provenance": "H1 read-only inventory plus H2 source bytes/SHA checks; earlier media dimensions from H1 ffprobe",
+  "scope": "21 original workflows, 20 generated outputs, five principal inputs, four public templates. Other private analysis files and HyperFrames assets remain in the source project.",
+  "sanitization": [
+    {
+      "experiment": "VACE-512",
+      "source_sha256": "cb20ab9e4ee998afbb49ff41f8f7f416303ae40ea7ba60fc402c7e37f2759b8f",
+      "public_artifact": "workflows/vace/vace-512-driver-baseline.json",
+      "public_sha256": "8283de5a49b9d001d75301f55486105e4edc949e8451d4301d06e5ce32780635"
+    },
+    {
+      "experiment": "ANIMATE2-V2",
+      "source_sha256": "683212646ea12ab4166ba22e64b0d7b380ea9b0a2cf04596d2c7561fc94f98e6",
+      "public_artifact": "workflows/animate2/animate2-v2-baseline.json",
+      "public_sha256": "7fc786ec1b21d251f4ae7ea7120bb739a16387e0ca4cd50ee1b56bf48dba6d00"
+    },
+    {
+      "experiment": "ANIMATE2-V3",
+      "source_sha256": "56c18b8118d454d1a4edbd78b116277fc93e24623bc7a16d2d54da9e746362bb",
+      "public_artifact": "workflows/animate2/animate2-v3-reference-aligned.json",
+      "public_sha256": "d8955a7bd0a01705f2ba91e62eb632d29ca199cf39ec38c9f3788c4238d8bfaf"
+    },
+    {
+      "experiment": "ANIMATE2-V4-UNRUN",
+      "source_sha256": "09616b54976d8d959aca3b69434ce60110a056bfc45783afde1ff8885dd7821a",
+      "public_artifact": "workflows/animate2/animate2-v4-pose-end-070-unrun.json",
+      "public_sha256": "c33d23cb8daa919dfe8f0a22c5e63a3ed3128bcc9df0b27ab8b2f6262fff860c"
+    }
+  ],
+  "artifacts": [
+    {
+      "logical_role": "VACE-512",
+      "original_filename": "vace13b_cleanhires_v4r1_512_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19641,
+      "sha256": "cb20ab9e4ee998afbb49ff41f8f7f416303ae40ea7ba60fc402c7e37f2759b8f",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": "workflows/vace/vace-512-driver-baseline.json"
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_cleanhires_v4r1_strength080_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19653,
+      "sha256": "96247f1ea8dca1c92cb678bd74346423cf6b6689ea43f3306af9d6a8667109a7",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_cleanhires_v4r1_strength120_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19653,
+      "sha256": "2970bd6208d79f149d126f4a495c8ac86484e4be925caf660f5c62cc1927b69a",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_mps_smoke_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 14329,
+      "sha256": "42c42285df46e7280b0184d04673163fbd6314a803a76193b03ef2b852bae4a5",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_padded_ref_control_v2_ab_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19632,
+      "sha256": "30cce0b6883bd8aa63c169720b4eeaa658fa85d4a79ac7de5be81dea0f1c2d9b",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_padded_ref_openpose_v3_ab_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19637,
+      "sha256": "178c6e7797f689a71a85064287f23881178d1e7ef246983a38c876d804f51ace",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_padded_ref_openpose_v4r1_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19638,
+      "sha256": "fac43438cd880960cd67554eef37e825e97f8b1e597d225f9ad2c4bb69a6589d",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_identity_hires_left_v4_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 16885,
+      "sha256": "2bc5ca04eddfde729a817895b6a8b246cb1863b9d192b74f91b82fa3253f794d",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_identity_hires_left_v5_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 16869,
+      "sha256": "92f67b4d3714b5e4ab6529456927ab8a1a73c8806f1cbdf8ab39a0a13ad412b0",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_identity_v3_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 16852,
+      "sha256": "90940446a17f8b1e9ce674b92a400bc6e0477184ebfaca81782f23bf4d57d833",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_pose_cjl_v1_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19612,
+      "sha256": "443ac67e6ed811c16914bf9693c4199638cafcebcb3698c8929d26792f0277a6",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_pose_cjl_v2_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 20308,
+      "sha256": "2e3531b00f7ae11c1629305d0612118f0b17d5f160f1d42f2d18a73a62ff7ed0",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_smoke_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 15607,
+      "sha256": "4b62ba30c6a5b11f335aae18d1fd6086e56863be1959c198f564a4c8bea8ab62",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_ref_smoke_384_17_v2.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 15594,
+      "sha256": "20f6cd8bdfdb1d247d5a471b6c3ea872fdcd9e2b76e6fb31a783e6309f1b56f3",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_refcmp_cleanhires_v4r1_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19648,
+      "sha256": "f938420739076065598691cca11bfcd447936462c27f47b7529a1024901255e0",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_refcmp_front_v4r1_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19631,
+      "sha256": "aea52bb22f111ce292f0ff444528268df9fb95941917623a140cb21217a98376",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "vace13b_refcmp_hiresleft_v4r1_384_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 19641,
+      "sha256": "5b9628922ac5e789c4a9b5d4382b5e55f9150ca895aeff84fe1919599e98f4fa",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE / Animate workflow history; preserved privately",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 37431,
+      "sha256": "deac5bea53110bce85a6775b56c89ddc0aee8101c7f8c31ce14bbd68e1c5549b",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "ANIMATE2-V4-UNRUN",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17_poseend070_v4.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 37966,
+      "sha256": "09616b54976d8d959aca3b69434ce60110a056bfc45783afde1ff8885dd7821a",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v4-pose-end-070-unrun.json"
+    },
+    {
+      "logical_role": "ANIMATE2-V3",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17_refaligned_v3.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 37974,
+      "sha256": "56c18b8118d454d1a4edbd78b116277fc93e24623bc7a16d2d54da9e746362bb",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v3-reference-aligned.json"
+    },
+    {
+      "logical_role": "ANIMATE2-V2",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17_v2.json",
+      "logical_location": "ComfyUI workflows",
+      "bytes": 37953,
+      "sha256": "683212646ea12ab4166ba22e64b0d7b380ea9b0a2cf04596d2c7561fc94f98e6",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": false,
+      "public_reason": "Original workflow contains private inputs, prompts or provenance; only selected sanitized templates are included",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v2-baseline.json"
+    },
+    {
+      "logical_role": "VACE-512 generated output",
+      "original_filename": "vace13b_cleanhires_v4r1_512_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 105180,
+      "sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_cleanhires_v4r1_strength080_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 90834,
+      "sha256": "d9db695b192cf806eda1240d02ed9bf6c51bf7e19bd03f26a692a76b5b7f0a90",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_cleanhires_v4r1_strength120_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 84872,
+      "sha256": "59628ec88d8e242fba2ed4126139ce8deafe38f787f3dbca82679b99f2c4b5f3",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_mps_smoke_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 34214,
+      "sha256": "506538cb0a3a0214190ab96aac7eb4a576331b10668a6293697b54f18a4071cd",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_padded_ref_control_v2_ab_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 96085,
+      "sha256": "20d82410dc5ab15510ee424a26da8b9f13cf010ae355c1de4b58873b2b887901",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_padded_ref_openpose_v3_ab_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 93154,
+      "sha256": "d5847bb53ac66084b76e432bca1708dd1937c227e84af9cccd2c76657ef55ec9",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_padded_ref_openpose_v4r1_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 78885,
+      "sha256": "7b55fecaad44733da1d28049df09c4afce9856133ad76826b4ab28feb04256d1",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_padded_ref_openpose_v4r1_384_17_00002_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 78885,
+      "sha256": "7b55fecaad44733da1d28049df09c4afce9856133ad76826b4ab28feb04256d1",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_ref_identity_hires_left_v5_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 54758,
+      "sha256": "804c26b58874277001be9f5b416b489bdc12764eb4eea14a7c426077852c4c82",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_ref_identity_v3_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 43945,
+      "sha256": "a144f70f94c4c9b6df0b87577924edeaf0014054b0111ecdbea837375d7c22e8",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_ref_pose_cjl_v1_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 106203,
+      "sha256": "030e2d5ac3680eae898e4e6c9c4b24afad1e333597233a378f64c8c9324a5ba9",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_ref_pose_cjl_v2_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 136768,
+      "sha256": "b20a30bef34f4ec4247004d505f0732e9f470310702a1f5923fe29f199daeec1",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_ref_smoke_384_17_v2_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 49419,
+      "sha256": "3a039813ba5b598c6b7fa41ed781fd5c8bd7774fc328f66372c4564086f7881c",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_refcmp_cleanhires_v4r1_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 80788,
+      "sha256": "49a241a8e73dc59017195a6b9e14a8ee1a76747151e2a5a128c154b9b910e5a3",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_refcmp_cleanhires_v4r1_384_17_00002_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 80788,
+      "sha256": "49a241a8e73dc59017195a6b9e14a8ee1a76747151e2a5a128c154b9b910e5a3",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_refcmp_front_v4r1_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 78864,
+      "sha256": "ffb1f4888d420d71dd5383f102f247bd948a8c7c5aa8d4c12539c4ace2ace482",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_refcmp_hiresleft_v4r1_384_17_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 81464,
+      "sha256": "c6ddde51665326dd1500f70eac51f3892f006273e2c07aae30d4e9e9b36f4b34",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Earlier VACE comparison output",
+      "original_filename": "vace13b_refcmp_hiresleft_v4r1_384_17_00002_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 81464,
+      "sha256": "c6ddde51665326dd1500f70eac51f3892f006273e2c07aae30d4e9e9b36f4b34",
+      "resolution": [
+        384,
+        384
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "ANIMATE2-V3 generated output",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17_refaligned_v3_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 141731,
+      "sha256": "45cf2edab69190c0bd403f80d65e105ad2b072a919a015704b939d3be8557b5f",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "ANIMATE2-V2 generated output",
+      "original_filename": "wananimate2_rgbdriver_smoke_512_17_v2_00001_.mp4",
+      "logical_location": "ComfyUI output",
+      "bytes": 160876,
+      "sha256": "2a5195ed39e3e6522bdfd603bc0a92d5ca5f5cd2cbe07e098a3c8179a3791140",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private generated media; workflow/prompt metadata embedded; release rights unreviewed",
+      "corresponding_sanitized_artifact": null
+    },
+    {
+      "logical_role": "Clean source reference",
+      "original_filename": "character-source-left-reference-clean.png",
+      "logical_location": "ComfyUI input",
+      "bytes": 570251,
+      "sha256": "7681153f74ebe7bf94f5af39036c013718b8384cd5102914b0d8c9ddabbdbbfa",
+      "resolution": [
+        508,
+        1000
+      ],
+      "frames": null,
+      "fps": null,
+      "duration_seconds": null,
+      "public_included": false,
+      "public_reason": "Private/source character asset or private derived input; user must supply own media",
+      "corresponding_sanitized_artifact": null,
+      "workflow_input_placeholder": null
+    },
+    {
+      "logical_role": "VACE / Animate v2 / v4 reference",
+      "original_filename": "character-source-left-reference-clean-padded-512.png",
+      "logical_location": "ComfyUI input",
+      "bytes": 177096,
+      "sha256": "99381e304a25df1e0f76295b0b577c808d650a592dafcb81b7ba8d27d73cd4ef",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": null,
+      "fps": null,
+      "duration_seconds": null,
+      "public_included": false,
+      "public_reason": "Private/source character asset or private derived input; user must supply own media",
+      "corresponding_sanitized_artifact": null,
+      "workflow_input_placeholder": "reference.png"
+    },
+    {
+      "logical_role": "Animate v3 aligned reference",
+      "original_filename": "character-source-left-reference-clean-driverf1-aligned-512.png",
+      "logical_location": "ComfyUI input",
+      "bytes": 86870,
+      "sha256": "3dbbe758eed32801e96af6ac96aa3d4634df74d355e79db961d84fdf2b6b0bc1",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": null,
+      "fps": null,
+      "duration_seconds": null,
+      "public_included": false,
+      "public_reason": "Private/source character asset or private derived input; user must supply own media",
+      "corresponding_sanitized_artifact": null,
+      "workflow_input_placeholder": "reference-aligned.png"
+    },
+    {
+      "logical_role": "Byte-identical staged RGB driver",
+      "original_filename": "wananimate2-driver-vace-512-17.mp4",
+      "logical_location": "ComfyUI input",
+      "bytes": 105180,
+      "sha256": "d27024c4787635be5c881d94c5ad54ca5b99670b3482075c5b015694c2aed7a4",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private/source character asset or private derived input; user must supply own media",
+      "corresponding_sanitized_artifact": null,
+      "workflow_input_placeholder": "driver.mp4"
+    },
+    {
+      "logical_role": "VACE OpenPose crouch/jump/landing control",
+      "original_filename": "crouch_jump_land_openpose_512_17_v4r1.mp4",
+      "logical_location": "ComfyUI input",
+      "bytes": 71500,
+      "sha256": "c3f99bc1e764e317d1e317d03f42b194d988f088bedce98a274984823e0b03f2",
+      "resolution": [
+        512,
+        512
+      ],
+      "frames": 17,
+      "fps": 8,
+      "duration_seconds": 2.125,
+      "public_included": false,
+      "public_reason": "Private/source character asset or private derived input; user must supply own media",
+      "corresponding_sanitized_artifact": null,
+      "workflow_input_placeholder": "pose-control.mp4"
+    },
+    {
+      "logical_role": "VACE-512 public reference template",
+      "original_filename": "vace-512-driver-baseline.json",
+      "logical_location": "workflows/vace/vace-512-driver-baseline.json",
+      "bytes": 15272,
+      "sha256": "8283de5a49b9d001d75301f55486105e4edc949e8451d4301d06e5ce32780635",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": true,
+      "public_reason": "Sanitized graph; private media and prompts omitted; static-only validation in H2",
+      "corresponding_sanitized_artifact": "workflows/vace/vace-512-driver-baseline.json",
+      "derived_from_filename": "vace13b_cleanhires_v4r1_512_17.json"
+    },
+    {
+      "logical_role": "ANIMATE2-V2 public reference template",
+      "original_filename": "animate2-v2-baseline.json",
+      "logical_location": "workflows/animate2/animate2-v2-baseline.json",
+      "bytes": 33301,
+      "sha256": "7fc786ec1b21d251f4ae7ea7120bb739a16387e0ca4cd50ee1b56bf48dba6d00",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": true,
+      "public_reason": "Sanitized graph; private media and prompts omitted; static-only validation in H2",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v2-baseline.json",
+      "derived_from_filename": "wananimate2_rgbdriver_smoke_512_17_v2.json"
+    },
+    {
+      "logical_role": "ANIMATE2-V3 public reference template",
+      "original_filename": "animate2-v3-reference-aligned.json",
+      "logical_location": "workflows/animate2/animate2-v3-reference-aligned.json",
+      "bytes": 33335,
+      "sha256": "d8955a7bd0a01705f2ba91e62eb632d29ca199cf39ec38c9f3788c4238d8bfaf",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": true,
+      "public_reason": "Sanitized graph; private media and prompts omitted; static-only validation in H2",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v3-reference-aligned.json",
+      "derived_from_filename": "wananimate2_rgbdriver_smoke_512_17_refaligned_v3.json"
+    },
+    {
+      "logical_role": "ANIMATE2-V4-UNRUN public reference template",
+      "original_filename": "animate2-v4-pose-end-070-unrun.json",
+      "logical_location": "workflows/animate2/animate2-v4-pose-end-070-unrun.json",
+      "bytes": 33325,
+      "sha256": "c33d23cb8daa919dfe8f0a22c5e63a3ed3128bcc9df0b27ab8b2f6262fff860c",
+      "resolution": null,
+      "frames": null,
+      "fps": null,
+      "public_included": true,
+      "public_reason": "Sanitized graph; private media and prompts omitted; static-only validation in H2",
+      "corresponding_sanitized_artifact": "workflows/animate2/animate2-v4-pose-end-070-unrun.json",
+      "derived_from_filename": "wananimate2_rgbdriver_smoke_512_17_poseend070_v4.json"
+    }
+  ]
+}
